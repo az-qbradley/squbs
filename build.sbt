@@ -32,6 +32,8 @@ lazy val `squbs-zkcluster` = project dependsOn `squbs-testkit` % "test"
 
 lazy val `squbs-httpclient` = project dependsOn(`squbs-unicomplex`, `squbs-testkit` % "test")
 
+lazy val `squbs-httpclient-experimental` = project dependsOn `squbs-unicomplex`
+
 // Add SlowTest configuration to squbs-pattern to run the long-running tests.
 // To run standard tests> test
 // To run slow tests including all stress tests> slow:test
@@ -56,11 +58,11 @@ lazy val `squbs-pattern` = (project dependsOn `squbs-testkit` % "test")
 //    definedTests in DebugTest := (definedTests in Test).value
 //  )
 
-lazy val `squbs-actorregistry` = project dependsOn (`squbs-unicomplex`, `squbs-testkit` % "test")
+lazy val `squbs-actorregistry` = project dependsOn(`squbs-unicomplex`, `squbs-testkit` % "test")
 
-lazy val `squbs-actormonitor` = project dependsOn (`squbs-unicomplex`, `squbs-testkit` % "test")
+lazy val `squbs-actormonitor` = project dependsOn(`squbs-unicomplex`, `squbs-testkit` % "test")
 
-lazy val `squbs-admin` = project dependsOn (`squbs-unicomplex`, `squbs-testkit` % "test")
+lazy val `squbs-admin` = project dependsOn(`squbs-unicomplex`, `squbs-testkit` % "test")
 
 publishTo in ThisBuild := {
   val nexus = "https://oss.sonatype.org/"
