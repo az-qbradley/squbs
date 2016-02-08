@@ -32,7 +32,7 @@ lazy val `squbs-zkcluster` = project dependsOn `squbs-testkit` % "test"
 
 lazy val `squbs-httpclient` = project dependsOn(`squbs-unicomplex`, `squbs-testkit` % "test")
 
-lazy val `squbs-httpclient-experimental` = project dependsOn `squbs-unicomplex`
+lazy val `squbs-httpclient-experimental` = project dependsOn `squbs-httpclient`
 
 // Add SlowTest configuration to squbs-pattern to run the long-running tests.
 // To run standard tests> test
